@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TxtCunia" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/Cunia</item>
+    </style>
+    <style name="TxtMuli" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/Muli</item>
+    </style>
+    <style name="TxtVarela" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/Varela</item>
+    </style>
+
+    <style name="TxtDefaultText" parent="TxtMuli">
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="TxtDefaultSubHeading" parent="TxtVarela">
+        <item name="android:textSize">24dp</item>
+    </style>
+    <style name="TxtDefaultHeading" parent="TxtCunia">
+        <item name="android:textSize">36dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
