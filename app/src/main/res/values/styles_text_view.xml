@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="TxtCunia" parent="TextAppearance.AppCompat">
-        <item name="android:fontFamily">@font/Cunia</item>
+        <item name="android:fontFamily">@font/muli_heading</item>
     </style>
     <style name="TxtMuli" parent="TextAppearance.AppCompat">
-        <item name="android:fontFamily">@font/Muli</item>
+        <item name="android:fontFamily">@font/muli</item>
     </style>
     <style name="TxtVarela" parent="TextAppearance.AppCompat">
-        <item name="android:fontFamily">@font/Varela</item>
+        <item name="android:fontFamily">@font/varela</item>
     </style>
 
     <style name="TxtDefaultText" parent="TxtMuli">

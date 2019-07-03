@@ -9,11 +9,20 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".activities.DetailPageActivity">
+        <activity
+                android:name=".activities.DetailPageActivity"
+                android:theme="@style/AppTheme.NoActionBar"
+        >
         </activity>
-        <activity android:name=".activities.SplashScreenActivity">
+        <activity
+                android:name=".activities.SplashScreenActivity"
+                android:theme="@style/AppTheme.NoActionBar"
+        >
         </activity>
-        <activity android:name=".activities.SearchPageActivity">
+        <activity
+                android:name=".activities.SearchPageActivity"
+                android:theme="@style/AppTheme.NoActionBar"
+        >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
