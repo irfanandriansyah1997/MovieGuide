@@ -18,13 +18,13 @@
 
     <TextView
             android:id="@+id/txtTutorialTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:layout_marginRight="32dp"
-            android:textSize="32sp"
-            android:textStyle="bold"
+            android:textAlignment="center"
+            style="@style/TxtDefaultHeading"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgTutorialImage"
@@ -32,16 +32,16 @@
 
     <TextView
             android:id="@+id/txtTutorialDesc"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
             android:gravity="center"
-            android:textSize="14sp"
+            style="@style/TxtDefaultText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtTutorialTitle"
-            tools:text="Nama saya Syauqi Ilham Alfaraci.\nSelamat datang di aplikasi saya"/>
+            tools:text="testing"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
