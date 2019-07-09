@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Alita: Battle Angel",
+    "length": "2h 2min",
+    "category": [
+      "Action",
+      "Adventure"
+    ],
+    "available": [
+      "IMAX",
+      "4D"
+    ]
+  },
+  {
+    "title": "Captain Marvel",
+    "length": "2h 3min",
+    "category": [
+      "Action",
+      "Adventure"
+    ],
+    "available": [
+      "IMAX",
+      "4D",
+      "3D"
+    ]
+  },
+  {
+    "title": "Avengers: End Game",
+    "length": "2h 10min",
+    "category": [
+      "Action",
+      "Fantasy"
+    ],
+    "available": [
+      "IMAX",
+      "4D"
+    ]
+  },
+  {
+    "title": "Far: From Home",
+    "length": "2h 14min",
+    "category": [
+      "Action",
+      "Comedy"
+    ],
+    "available": [
+      "IMAX",
+      "4D",
+      "3D"
+    ]
+  }
+]

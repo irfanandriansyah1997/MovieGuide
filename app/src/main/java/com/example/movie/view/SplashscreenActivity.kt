@@ -19,13 +19,12 @@ class SplashscreenActivity : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("com.example.movie.SHARED_PREFERENCES", Context.MODE_PRIVATE)
         Timer("SplashScreen", false).schedule(1000) {
             var i : Intent
+
 //            if (sharedPreferences.getBoolean("intro_seen", false)) {
-//                if (sharedPreferences.getString("current_user", null) != null)
-//                    i = Intent(this@SplashScreenActivity, MainActivity::class.java)
-//                else
-//                    i = Intent(this@SplashScreenActivity, LoginActivity::class.java)
+//                i = Intent(this@SplashScreenActivity, MainActivity::class.java)
 //            } else
-//                i = Intent(this@SplashScreenActivity, IntroActivity::class.java)
+//                i = Intent(this@SplashscreenActivity, IntroActivity::class.java)
+
             i = Intent(this@SplashscreenActivity, IntroActivity::class.java)
             startActivity(i)
             finish()

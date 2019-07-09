@@ -11,6 +11,7 @@ import com.example.movie.R
 import com.example.movie.adapter.OnboardingAdapter
 import com.example.movie.model.OnboardingModel
 import kotlinx.android.synthetic.main.activity_intro.*
+import org.jetbrains.anko.startActivity
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
@@ -30,8 +31,8 @@ class IntroActivity : AppCompatActivity() {
         vpgTutorialViewPager.adapter = tutorialPagerAdapter
         bGetStarted.setOnClickListener(View.OnClickListener {
             sharedPreferences.edit().putBoolean("intro_seen", true).apply()
-//            startActivity<LoginActivity>()
-//            finish()
+            startActivity<MainActivity>()
+            finish()
         })
     }
 }
