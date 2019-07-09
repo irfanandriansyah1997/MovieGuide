@@ -22,9 +22,11 @@ class IntroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
         sharedPreferences = getSharedPreferences("edu.unikom.dontbealone.SHARED_PREFERENCES", Context.MODE_PRIVATE)
+
         val jsonReader = BufferedReader(InputStreamReader(resources.openRawResource(R.raw.list_onboarding)))
         val list = Gson().fromJson<ArrayList<OnboardingModel>>(jsonReader, object : TypeToken<ArrayList<OnboardingModel>>() {}.type)
         val tutorialPagerAdapter = OnboardingAdapter(supportFragmentManager, list)
+
         vpgTutorialViewPager.adapter = tutorialPagerAdapter
         bGetStarted.setOnClickListener(View.OnClickListener {
             sharedPreferences.edit().putBoolean("intro_seen", true).apply()

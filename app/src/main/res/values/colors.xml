@@ -3,6 +3,8 @@
     <color name="colorPrimary">#EC407A</color>
     <color name="colorPrimaryDark">#EC407A</color>
     <color name="colorAccent">#9C27B0</color>
+    <color name="colorHeading">#212121</color>
+    <color name="colorText">#616161</color>
     <color name="backgroundPrimary">#f5f5f5</color>
     <color name="backgroundSplash">#414345</color>
 </resources>

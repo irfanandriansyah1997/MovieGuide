@@ -12,35 +12,52 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-    <com.rd.PageIndicatorView
-            android:id="@+id/pivTutorialIndicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/bGetStarted"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/vpgTutorialViewPager"
-            app:piv_animationType="scale"
-            app:piv_dynamicCount="true"
-            app:piv_interactiveAnimation="true"
-            app:piv_radius="4dp"
-            app:piv_selectedColor="@color/colorPrimary"
-            app:piv_unselectedColor="#ccc"
-            app:piv_viewPager="@id/vpgTutorialViewPager"/>
-
-    <Button
-            android:id="@+id/bGetStarted"
-            style="@style/Widget.AppCompat.Button"
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerButton"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginRight="64dp"
-            android:layout_marginBottom="32dp"
-            android:background="#ddd"
-            android:text="Get Started"
-            android:textColor="#fff"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/vpgTutorialViewPager"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/box_with_border"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:clipToPadding="false"
+    >
+        <com.rd.PageIndicatorView
+                android:id="@+id/pivTutorialIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bGetStarted"
+                app:layout_constraintBottom_toBottomOf="@id/bGetStarted"
+                app:piv_animationType="thinWorm"
+                app:piv_dynamicCount="true"
+                app:piv_interactiveAnimation="true"
+                app:piv_radius="6dp"
+                app:piv_selectedColor="@color/colorPrimary"
+                app:piv_unselectedColor="#ccc"
+                app:piv_viewPager="@id/vpgTutorialViewPager"
+                tools:ignore="MissingConstraints"/>
+        <Button
+                android:id="@+id/bGetStarted"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_button"
+                android:text="Get Started"
+                android:paddingLeft="48dp"
+                android:paddingRight="48dp"
+                android:textColor="#fff"
+                style="@style/TxtMuli"
+                android:textSize="18dp"
+                android:textAllCaps="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
