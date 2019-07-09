@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TxtMuliHeading" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/muli_heading</item>
+    </style>
+    <style name="TxtMuli" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+    <style name="TxtVarela" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/varela</item>
+    </style>
+
+    <style name="TxtDefaultText" parent="TxtMuli">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+    <style name="TxtDefaultSubHeading" parent="TxtVarela">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">@color/colorHeading</item>
+    </style>
+    <style name="TxtDefaultHeading" parent="TxtMuliHeading">
+        <item name="android:textSize">38dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorHeading</item>
+    </style>
+</resources>
