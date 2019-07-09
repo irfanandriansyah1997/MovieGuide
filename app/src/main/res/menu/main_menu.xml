@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/custom"
+            android:title="Video"
+            android:icon="@drawable/icon_bookmark"
+            app:showAsAction="ifRoom"/>
+
+    <item
+            android:id="@+id/custom3"
+            android:title="Video"
+            android:icon="@drawable/icon_bookmark"
+            app:showAsAction="ifRoom"/>
+
+    <item
+            android:id="@+id/gallery_fav"
+            android:title="Favourite"
+            android:icon="@drawable/icon_fav"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/custom2"
+            android:title="Favourite"
+            android:icon="@drawable/icon_notification"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/custom4"
+            android:title="Favourite"
+            android:icon="@drawable/icon_notification"
+            app:showAsAction="ifRoom"/>
+
+</menu>
