@@ -3,7 +3,7 @@ package com.example.movieguide.interfaces;
 /**
  * @author Irfan Andriansyah
  */
-interface SortingDialogView
+public interface SortingDialogView
 {
     void setPopularChecked();
     void setNewestChecked();

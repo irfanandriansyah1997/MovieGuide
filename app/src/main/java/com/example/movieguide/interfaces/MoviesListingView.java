@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @author Irfan Andriansyah
  */
-interface MoviesListingView
+public interface MoviesListingView
 {
     void showMovies(List<Movie> movies);
     void loadingStarted();
