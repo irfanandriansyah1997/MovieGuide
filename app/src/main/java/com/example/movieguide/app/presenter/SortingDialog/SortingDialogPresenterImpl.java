@@ -4,12 +4,12 @@ import com.example.movieguide.app.interactor.SortingDialogInteractor;
 import com.example.movieguide.interfaces.SortType;
 import com.example.movieguide.interfaces.SortingDialogView;
 
-class SortingDialogPresenterImpl implements SortingDialogPresenter
+public class SortingDialogPresenterImpl implements SortingDialogPresenter
 {
     private SortingDialogView view;
     private SortingDialogInteractor sortingDialogInteractor;
 
-    SortingDialogPresenterImpl(SortingDialogInteractor interactor)
+    public SortingDialogPresenterImpl(SortingDialogInteractor interactor)
     {
         sortingDialogInteractor = interactor;
     }

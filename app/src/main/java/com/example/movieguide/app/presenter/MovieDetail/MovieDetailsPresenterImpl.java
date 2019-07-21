@@ -17,14 +17,14 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * @author arun
  */
-class MovieDetailsPresenterImpl implements MovieDetailsPresenter {
+public class MovieDetailsPresenterImpl implements MovieDetailsPresenter {
     private MovieDetailsView view;
     private MovieDetailsInteractor movieDetailsInteractor;
     private FavoritesInteractor favoritesInteractor;
     private Disposable trailersSubscription;
     private Disposable reviewSubscription;
 
-    MovieDetailsPresenterImpl(MovieDetailsInteractor movieDetailsInteractor, FavoritesInteractor favoritesInteractor) {
+    public MovieDetailsPresenterImpl(MovieDetailsInteractor movieDetailsInteractor, FavoritesInteractor favoritesInteractor) {
         this.movieDetailsInteractor = movieDetailsInteractor;
         this.favoritesInteractor = favoritesInteractor;
     }
