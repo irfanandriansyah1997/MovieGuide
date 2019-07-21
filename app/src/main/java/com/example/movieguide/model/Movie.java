@@ -28,6 +28,7 @@ public class Movie implements Parcelable
     @Json(name = "vote_average")
     private double voteAverage;
 
+    public Movie() { }
 
     protected Movie(Parcel in)
     {

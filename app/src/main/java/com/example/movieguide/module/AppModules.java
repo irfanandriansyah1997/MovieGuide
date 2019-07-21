@@ -12,7 +12,7 @@ import io.realm.Realm;
 public class AppModules {
     private Context context;
 
-    AppModules(Application application)
+    public AppModules(Application application)
     {
         context = application;
     }
