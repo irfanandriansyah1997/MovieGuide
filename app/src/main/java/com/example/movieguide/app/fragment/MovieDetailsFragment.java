@@ -12,6 +12,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +42,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 
+import static android.support.constraint.Constraints.TAG;
+
 public class MovieDetailsFragment extends Fragment implements MovieDetailsView, View.OnClickListener
 {
     @Inject
@@ -56,6 +59,10 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
     TextView releaseDate;
     @BindView(R.id.movie_rating)
     TextView rating;
+    @BindView(R.id.movie_popularity)
+    TextView popularity;
+    @BindView(R.id.movie_vote_average)
+    TextView vote;
     @BindView(R.id.movie_description)
     TextView overview;
     @BindView(R.id.trailers_label)
@@ -153,8 +160,10 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
     {
         Glide.with(getContext()).load(APIModules.getBackdropPath(movie.getBackdropPath())).into(poster);
         title.setText(movie.getTitle());
-        releaseDate.setText(String.format(getString(R.string.release_date), movie.getReleaseDate()));
+        releaseDate.setText(movie.getReleaseDate());
         rating.setText(String.format(getString(R.string.rating), String.valueOf(movie.getVoteAverage())));
+        popularity.setText(String.valueOf(movie.getPopularity()));
+        vote.setText(String.valueOf(movie.getVoteCount()));
         overview.setText(movie.getOverview());
         movieDetailsPresenter.showTrailers(movie);
         movieDetailsPresenter.showReviews(movie);
