@@ -54,6 +54,8 @@ public class MoviesListingActivity extends AppCompatActivity implements MoviesLi
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(R.string.movie_guide);
             getSupportActionBar().setDisplayShowTitleEnabled(true);
+            getSupportActionBar().setIcon(R.drawable.ic_icon);
+
         }
     }
 

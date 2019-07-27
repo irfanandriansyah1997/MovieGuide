@@ -2,8 +2,10 @@ package com.example.movieguide.app.adapter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.support.v7.graphics.Palette;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,10 +38,18 @@ public class MoviesListingAdapter extends RecyclerView.Adapter<MoviesListingAdap
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         @BindView(R.id.movie_poster)
         ImageView poster;
-        @BindView(R.id.title_background)
-        View titleBackground;
+
         @BindView(R.id.movie_name)
         TextView name;
+
+        @BindView(R.id.movie_rating)
+        TextView rating;
+
+        @BindView(R.id.movie_date)
+        TextView date;
+
+        @BindView(R.id.movie_card)
+        CardView card;
 
         public Movie movie;
 
@@ -69,9 +79,11 @@ public class MoviesListingAdapter extends RecyclerView.Adapter<MoviesListingAdap
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.itemView.setOnClickListener(holder);
+        holder.card.setOnClickListener(holder);
         holder.movie = movies.get(position);
         holder.name.setText(holder.movie.getTitle());
+        holder.rating.setText(Double.toString(holder.movie.getVoteAverage()));
+        holder.date.setText(holder.movie.getReleaseDate());
 
         RequestOptions options = new RequestOptions()
                 .centerCrop()
@@ -86,14 +98,8 @@ public class MoviesListingAdapter extends RecyclerView.Adapter<MoviesListingAdap
                     @Override
                     public void onResourceReady(Bitmap bitmap, @Nullable Transition<? super Bitmap> transition) {
                         super.onResourceReady(bitmap, transition);
-                        Palette.from(bitmap).generate(palette -> setBackgroundColor(palette, holder));
                     }
                 });
-    }
-
-    private void setBackgroundColor(Palette palette, ViewHolder holder) {
-        holder.titleBackground.setBackgroundColor(palette.getVibrantColor(context
-                .getResources().getColor(R.color.black_translucent_60)));
     }
 
     @Override

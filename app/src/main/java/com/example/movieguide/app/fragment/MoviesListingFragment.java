@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.example.movieguide.BaseApplication;
 import com.example.movieguide.R;
@@ -37,6 +38,9 @@ public class MoviesListingFragment extends Fragment implements MoviesListingView
 
     @BindView(R.id.movies_listing)
     RecyclerView moviesListing;
+
+    @BindView(R.id.movie_loading)
+    ProgressBar moviesBar;
 
     private RecyclerView.Adapter adapter;
     private List<Movie> movies = new ArrayList<>(20);
@@ -131,16 +135,19 @@ public class MoviesListingFragment extends Fragment implements MoviesListingView
         moviesListing.setVisibility(View.VISIBLE);
         adapter.notifyDataSetChanged();
         callback.onMoviesLoaded(movies.get(0));
+        moviesBar.setVisibility(View.GONE);
     }
 
     @Override
     public void loadingStarted() {
         Snackbar.make(moviesListing, R.string.loading_movies, Snackbar.LENGTH_SHORT).show();
+        moviesBar.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void loadingFailed(String errorMessage) {
         Snackbar.make(moviesListing, errorMessage, Snackbar.LENGTH_INDEFINITE).show();
+        moviesBar.setVisibility(View.GONE);
     }
 
     @Override
