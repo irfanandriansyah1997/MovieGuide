@@ -2,12 +2,15 @@ package com.example.movieguide.app.fragment;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -71,8 +74,8 @@ public class SortingDialogFragment extends DialogFragment implements SortingDial
         initViews();
 
         Dialog dialog = new Dialog(getActivity());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(dialogView);
-        dialog.setTitle(R.string.sort_by);
         dialog.show();
         return dialog;
     }

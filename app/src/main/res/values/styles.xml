@@ -7,6 +7,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/window_background</item>
         <item name="android:dialogTheme">@style/TitledDialog</item>
+        <item name="android:fontFamily">@font/muli</item>
     </style>
 
     <style name="TitledDialog" parent="@style/Theme.AppCompat.Light.Dialog">

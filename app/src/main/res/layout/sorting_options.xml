@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:minWidth="300dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="#f0f0f0">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_ilustrator_sort" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/muli_heading"
+            android:gravity="center"
+            android:text="Sort Movie"
+            android:textColor="@android:color/black"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/movie_rating"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:fontFamily="@font/muli"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="sort movie based on filter options"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+    </LinearLayout>
+
 
     <RadioGroup
         android:id="@+id/sorting_group"
@@ -15,40 +52,41 @@
             android:id="@+id/most_popular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp"
             android:paddingTop="8dp"
-            android:text="@string/most_popular"/>
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/most_popular" />
 
         <RadioButton
             android:id="@+id/highest_rated"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp"
             android:paddingTop="8dp"
-            android:text="@string/highest_rated"/>
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/highest_rated" />
 
         <RadioButton
             android:id="@+id/favorites"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp"
             android:paddingTop="8dp"
-            android:text="@string/favorites"/>
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/favorites" />
+
         <RadioButton
             android:id="@+id/newest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp"
             android:paddingTop="8dp"
-            android:text="@string/newest"/>
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/newest" />
 
     </RadioGroup>
 </LinearLayout>

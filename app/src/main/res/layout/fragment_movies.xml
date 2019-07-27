@@ -10,4 +10,13 @@
         android:layout_height="match_parent"
         android:scrollbars="vertical"
         android:visibility="gone"/>
+    <ProgressBar
+        android:id="@+id/movie_loading"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/progressBarStyle"
+        android:background="@drawable/ic_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
 </FrameLayout>
