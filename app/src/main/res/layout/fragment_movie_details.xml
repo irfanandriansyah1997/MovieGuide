@@ -59,7 +59,9 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
+                android:fontFamily="@font/muli_heading"
                 android:textColor="@android:color/black"
+                android:text="title"
                 android:textSize="32sp"/>
 
             <TextView
@@ -68,8 +70,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="@font/muli"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="2019"
                 android:textColor="@android:color/black"/>
 
             <TextView
@@ -78,8 +81,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="@font/muli"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="9.5 / 10"
                 android:textColor="@android:color/black"/>
 
             <TextView
@@ -89,6 +93,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="32dp"
                 android:text="@string/summary"
+                android:fontFamily="@font/muli_heading"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@android:color/black"/>
 
@@ -100,6 +105,7 @@
                 android:fontFamily="sans-serif-light"
                 android:lineSpacingMultiplier="1.2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:text="description"
                 android:textColor="@android:color/black"/>
 
             <include

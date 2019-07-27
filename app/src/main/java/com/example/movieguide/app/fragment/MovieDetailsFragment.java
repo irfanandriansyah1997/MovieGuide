@@ -261,12 +261,12 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
 
     private void onReviewClick(TextView view)
     {
-        if (view.getMaxLines() == 5)
+        if (view.getMaxLines() == 3)
         {
             view.setMaxLines(500);
         } else
         {
-            view.setMaxLines(5);
+            view.setMaxLines(3);
         }
     }
 
