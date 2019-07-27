@@ -28,6 +28,12 @@ public class Movie implements Parcelable
     @Json(name = "vote_average")
     private double voteAverage;
 
+    @Json(name = "vote_count")
+    private int voteCount;
+
+    @Json(name = "popularity")
+    private double popularity;
+
     public Movie() { }
 
     protected Movie(Parcel in)
@@ -39,6 +45,8 @@ public class Movie implements Parcelable
         backdropPath = in.readString();
         title = in.readString();
         voteAverage = in.readDouble();
+        voteCount = in.readInt();
+        popularity = in.readDouble();
     }
 
     public static final Creator<Movie> CREATOR = new Creator<Movie>()
@@ -126,6 +134,22 @@ public class Movie implements Parcelable
         this.voteAverage = voteAverage;
     }
 
+    public int getVoteCount() {
+        return voteCount;
+    }
+
+    public void setVoteCount(int voteCount) {
+        this.voteCount = voteCount;
+    }
+
+    public double getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(double popularity) {
+        this.popularity = popularity;
+    }
+
     @Override
     public int describeContents()
     {
@@ -142,6 +166,7 @@ public class Movie implements Parcelable
         parcel.writeString(backdropPath);
         parcel.writeString(title);
         parcel.writeDouble(voteAverage);
+        parcel.writeInt(voteCount);
     }
 }
 
