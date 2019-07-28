@@ -15,6 +15,8 @@ public class MovieRealmObject extends RealmObject {
     private String backdropPath;
     private String title;
     private double voteAverage;
+    private int voteCount;
+    private double popularity;
 
     public static final String ID = "id";
     public static final String OVERVIEW = "overview";
@@ -81,6 +83,20 @@ public class MovieRealmObject extends RealmObject {
         this.voteAverage = voteAverage;
     }
 
+    public int getVoteCount() {  return voteCount;  }
+
+    public void setVoteCount(int voteCount) {
+        this.voteCount= voteCount;
+    }
+
+    public double getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(double popularity) {
+        this.popularity = popularity;
+    }
+
     public MovieRealmObject(Movie movie) {
         id = movie.getId();
         overview = movie.getOverview();
@@ -89,6 +105,7 @@ public class MovieRealmObject extends RealmObject {
         backdropPath = movie.getBackdropPath();
         title = movie.getTitle();
         voteAverage = movie.getVoteAverage();
+        voteCount = movie.getVoteCount();
     }
 
     public MovieRealmObject(){

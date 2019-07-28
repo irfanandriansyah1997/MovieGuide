@@ -46,32 +46,126 @@
                 android:id="@+id/movie_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
-                android:textColor="@android:color/white"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/muli_heading"
+                android:textColor="@android:color/black"
+                android:text="title"
                 android:textSize="32sp"/>
 
-            <TextView
-                android:id="@+id/movie_year"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:fontFamily="sans-serif-light"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@android:color/white"/>
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/movie_rating"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/movie_icon_rating"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/ic_release" />
+                <TextView
+                    android:id="@+id/movie_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/muli"
+                    android:text="2019"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black"
+                    android:textStyle="italic"
+                    android:alpha="0.5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:fontFamily="sans-serif-light"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@android:color/white"/>
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_rating"
+                        android:layout_marginBottom="10dp"
+                        android:alpha="0.5" />
+                    <TextView
+                        android:id="@+id/movie_rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/muli_heading"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:text="9.5 / 10"
+                        android:textSize="16dp"
+                        android:alpha="0.6"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_vote_average"
+                        android:layout_marginBottom="10dp"
+                        android:alpha="0.5" />
+                    <TextView
+                        android:id="@+id/movie_vote_average"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/muli_heading"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:text="6.3"
+                        android:textSize="16dp"
+                        android:alpha="0.6"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_popularity"
+                        android:layout_marginBottom="10dp"
+                        android:alpha="0.5" />
+                    <TextView
+                        android:id="@+id/movie_popularity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/muli_heading"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:text="66.219"
+                        android:alpha="0.6"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -79,19 +173,21 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
+                android:fontFamily="@font/muli_heading"
                 android:text="@string/summary"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                android:textColor="@android:color/white"/>
+                android:textColor="@android:color/black"/>
 
             <TextView
                 android:id="@+id/movie_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="@font/muli"
                 android:lineSpacingMultiplier="1.2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@android:color/white"/>
+                android:text="description"
+                android:textColor="@android:color/black"/>
 
             <include
                 layout="@layout/trailers_and_reviews"

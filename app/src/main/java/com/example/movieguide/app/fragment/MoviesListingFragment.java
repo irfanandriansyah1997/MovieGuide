@@ -39,9 +39,6 @@ public class MoviesListingFragment extends Fragment implements MoviesListingView
     @BindView(R.id.movies_listing)
     RecyclerView moviesListing;
 
-    @BindView(R.id.movie_loading)
-    ProgressBar moviesBar;
-
     private RecyclerView.Adapter adapter;
     private List<Movie> movies = new ArrayList<>(20);
     private Callback callback;
@@ -135,19 +132,16 @@ public class MoviesListingFragment extends Fragment implements MoviesListingView
         moviesListing.setVisibility(View.VISIBLE);
         adapter.notifyDataSetChanged();
         callback.onMoviesLoaded(movies.get(0));
-        moviesBar.setVisibility(View.GONE);
     }
 
     @Override
     public void loadingStarted() {
         Snackbar.make(moviesListing, R.string.loading_movies, Snackbar.LENGTH_SHORT).show();
-        moviesBar.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void loadingFailed(String errorMessage) {
         Snackbar.make(moviesListing, errorMessage, Snackbar.LENGTH_INDEFINITE).show();
-        moviesBar.setVisibility(View.GONE);
     }
 
     @Override

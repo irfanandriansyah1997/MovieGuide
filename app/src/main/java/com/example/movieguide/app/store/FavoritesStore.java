@@ -69,6 +69,8 @@ public class FavoritesStore
         movie.setBackdropPath(movieRealmObject.getBackdropPath());
         movie.setTitle(movieRealmObject.getTitle());
         movie.setVoteAverage(movieRealmObject.getVoteAverage());
+        movie.setVoteCount(movieRealmObject.getVoteCount());
+        movie.setPopularity(movieRealmObject.getPopularity());
 
         return movie;
     }

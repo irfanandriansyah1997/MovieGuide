@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:text="@string/trailers"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:textColor="@android:color/white"
+        android:fontFamily="@font/muli_heading"
+        android:textColor="@android:color/black"
         android:visibility="gone"/>
 
     <HorizontalScrollView
@@ -34,7 +35,8 @@
         android:layout_marginTop="16dp"
         android:text="@string/reviews"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:textColor="@android:color/white"
+        android:fontFamily="@font/muli_heading"
+        android:textColor="@android:color/black"
         android:visibility="gone"/>
 
     <LinearLayout
