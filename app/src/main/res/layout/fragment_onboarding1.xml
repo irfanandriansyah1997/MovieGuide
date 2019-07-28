@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".app.fragment.Onboarding1Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/my_profile_images"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_marginTop="100dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:src="@drawable/ic_movie"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/my_profile_images">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_heading"
+                android:gravity="center"
+                android:text="My Profile"
+                android:textAlignment="center"
+                android:textSize="28dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/muli"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="lorem ipsum dolor sim amet lorem ipsum dolor sim amet lorem ipsum dolor sim amet"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>
